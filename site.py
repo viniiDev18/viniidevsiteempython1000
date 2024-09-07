@@ -1,6 +1,4 @@
 from flask import Flask, render_template
-from site import app as application
-app = application
 
 app = Flask(__name__)
 # route => domínio do seu site, ex: /contatos, /homepage.
@@ -22,7 +20,6 @@ def contatos():
 def usuarios(nome_usuario): # define a variável e joga para o html
     return render_template("usuarios.html", nome_usuario=nome_usuario) # retorna a variável descrita em html
 
-site = app.site
 
 if __name__ == "__main__":
     app.run(debug=True)
